@@ -1,0 +1,49 @@
+<script type="text/javascript">
+function set_class(parent, non_parents)
+{	
+	for(i = 0; i < non_parents.length; i++)
+	{
+		document.getElementById(non_parents[i]).setAttribute('class', '');
+	}
+	document.getElementById(parent).setAttribute('class', 'active');	
+}
+</script>
+<%= will_paginate @products %>
+<div class="row">
+		<div class="span8">
+			<h3>List of available Products</h3>
+			<ul>
+				<%= puts Product.all.inspect %>
+				<% @products.each do |product| %>					
+					<li>
+						<% item = Product.item(product) %>
+						<%= link_to "#{product.type}" , item, method: :get %> (<%= product.item_list %>)
+						<%= link_to "edit", {controller: "#{product.type.downcase}s", action: :edit, id: item} %>
+						<%= link_to "delete", item, method: :delete, data: {confirm: "Are you sure"} %>						
+					</li>
+				<% end %>
+			</ul>
+		</div>		
+</div>
+
+<div class="row">
+		<ul class="nav nav-pills">
+
+			<li id = 'book_link'>
+				<%= link_to "Create a Book", "#{new_product_path(item_class: "Book")}", 
+				onclick: "set_class('book_link', ['camera_link', 'song_link']);", class: "btn-small", remote: true %>
+			</li>
+
+			<li id = 'camera_link'>
+				<%= link_to "Create a Camera", "#{new_product_path(item_class: "Camera")}", 
+				onclick: "set_class('camera_link', ['book_link', 'song_link']);", class: "btn-small", remote: true %>
+			</li>
+
+			<li id = 'song_link'>
+				<%= link_to "Create a Song", "#{new_product_path(item_class: "Song")}", 
+				onclick: "set_class('song_link', ['camera_link', 'book_link']);", class: "btn-small", remote: true %>
+			</li>
+			
+		</ul>
+		<div id="create_item_form"></div>
+</div>

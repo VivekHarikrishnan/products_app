@@ -29,7 +29,11 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     addressable (2.2.8)
+    annotate (2.4.1.beta1)
     arel (3.0.2)
+    bootstrap-sass (2.0.0)
+    bootstrap-will_paginate (0.0.6)
+      will_paginate
     builder (3.0.0)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -85,7 +89,9 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.6)
+    mysql2 (0.3.11)
     mysql2 (0.3.11-x86-mingw32)
+    nokogiri (1.5.5)
     nokogiri (1.5.5-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -155,13 +161,18 @@ GEM
     uglifier (1.2.6)
       execjs (>= 0.3.0)
       multi_json (~> 1.3)
+    will_paginate (3.0.3)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
+  annotate
+  bootstrap-sass
+  bootstrap-will_paginate (= 0.0.6)
   capybara
   coffee-rails (~> 3.2.1)
   factory_girl_rails
@@ -174,3 +185,4 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
+  will_paginate (= 3.0.3)

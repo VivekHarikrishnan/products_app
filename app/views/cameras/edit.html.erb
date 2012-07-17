@@ -1,0 +1,20 @@
+<h1>Update Camera details</h1>
+<div class="row">
+	<div>
+		<%= form_for(@camera) do |f| %>
+			<%= render 'shared/error_messages', object: f.object %>
+
+			<%= f.label :model %>
+			<%= f.text_field :model %>
+
+			<%= f.label :make %>
+			<%= f.text_field :make %>
+
+			<%= f.label :price %>
+			<%= f.text_field :price %>
+
+			<br />
+			<%= f.submit "Update Camera", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
+</div>

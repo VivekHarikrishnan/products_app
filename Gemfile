@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
+gem 'bootstrap-sass'
+gem 'annotate'
+gem 'faker'
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -26,7 +31,6 @@ end
 gem 'jquery-rails'
 
 group :test do	
-	gem 'faker'	
 	gem 'capybara'
 	gem 'launchy'
 	gem 'guard-rspec'

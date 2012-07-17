@@ -1,0 +1,20 @@
+<h5>Create a Camera</h5>
+<div class="row">
+	<div>
+		<%= form_for(@camera, remote: true) do |f| %>
+			<%= render 'shared/error_messages', object: f.object %>
+
+			<%= f.label :model %>
+			<%= f.text_field :model %>
+
+			<%= f.label :make %>
+			<%= f.text_field :make %>
+
+			<%= f.label :price %>
+			<%= f.text_field :price %>
+
+			<br />
+			<%= f.submit "Create Camera", class: "btn btn-medium btn-primary" %>
+		<% end %>
+	</div>
+</div>

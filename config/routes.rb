@@ -1,5 +1,18 @@
 ProductsApp::Application.routes.draw do
-  # The priority is based upon order of creation:
+  root to: 'admin#home'
+  
+  match '/product_list', to: "admin#index"
+
+  match '/create_product', to: "admin#create"
+
+  match '/new_product', to: "admin#new"
+
+  resources :books
+  resources :cameras
+  resources :songs
+
+
+    # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
