@@ -1,17 +1,4 @@
-<style>
-  .commands {
-    border: 1px solid lightgray; 
-    margin: 12px; 
-    padding: 10px;
-  }
-
-  span {
-    font-size: 12px;
-    font-family: sans-serif;
-  }
-</style>
-
-<div style="position: absolute; left: 15%; width: 55%">
+<div>
     <h1>Welcome to Products Application</h1>
     <div>
       This application is created to list out products like Camera, Books and Songs. <br />
@@ -19,7 +6,7 @@
     </div>
     <h2>Requirements</h2>
     <hr />
-    <div class="commands"> 
+    <div> 
       <ul>
         <li>Ruby 1.9.3</li>
         <li>Ruby Gems 1.8.24</li>
@@ -29,25 +16,25 @@
       </ul>
     </div>
 
-    <div style="padding: 10px">
+    <div>
     <h2>Installation</h2>
     <hr />
     Clone the Git repository
-    <div class="commands"> 
+    <div> 
       <span>
         $ git clone git@github.com/VivekHarikrishnan/products_app.git
       </span>
     </div>
 
     Run bundle to install necessary gems
-    <div class="commands">  
+    <div>  
       <span>
         $ bundle install
       </span>
     </div>
 
     Database setup for the application
-    <div class="commands">  
+    <div>  
       <span>
         $ rake db:create <br/>
         $ rake db:migrate
@@ -55,14 +42,14 @@
     </div>
 
     To run the application with initial set of data, use the following command
-    <div class="commands">  
+    <div>  
       <span>
         $ rake db:populate        
       </span>
     </div>
 
     Run the server
-    <div class="commands">  
+    <div>  
       <span>
         $ rails server
       </span>
