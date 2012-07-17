@@ -17,45 +17,47 @@
     </div>
 
     <div>
-    <h2>Installation</h2>
-    <hr />
-    Clone the Git repository
-    <div> 
-      <span>
-        $ git clone git@github.com/VivekHarikrishnan/products_app.git
-      </span>
+      <h2>Installation</h2>
+      <hr />
+      <ul>
+        <li>Clone the Git repository </li><br />
+            <ul>
+              <li>
+                $ git clone git@github.com/VivekHarikrishnan/products_app.git
+              </li> <br/>
+            </ul>
+
+        <li>Run bundle to install necessary gems</li><br />
+        <ul>  
+          <li>
+            $ bundle install
+          </li><br/>
+        </ul>
+
+        <li>Database setup for the application</li><br />
+        <ul>  
+          <li>
+            $ rake db:create </li><br/>
+            <li>$ rake db:migrate</li><br/>
+        </ul>
+
+        <li>To run the application with initial set of data, use the following command</li><br />
+        <ul>  
+          <li>
+                      $ rake db:populate        
+          </li><br/>
+        </ul>
+
+        <li>Run the server</li><br />
+        <ul>  
+          <li>
+            $ rails server
+          </li><br/>
+        </ul>    
+      </ul>
     </div>
-
-    Run bundle to install necessary gems
-    <div>  
-      <span>
-        $ bundle install
-      </span>
-    </div>
-
-    Database setup for the application
-    <div>  
-      <span>
-        $ rake db:create <br/>
-        $ rake db:migrate
-      </span>
-    </div>
-
-    To run the application with initial set of data, use the following command
-    <div>  
-      <span>
-        $ rake db:populate        
-      </span>
-    </div>
-
-    Run the server
-    <div>  
-      <span>
-        $ rails server
-      </span>
-    </div>    
-
-    The application should be up and running. 
-    You can visit the applications home page through <a target="_blank" href="http://localhost:3000">http://localhost:3000</a>
-  </div>
+    <div>
+      The application should be up and running. <br />
+      You can visit the applications home page through <a target="_blank" href="http://localhost:3000">http://localhost:3000</a>
+    <div>
 </div>
